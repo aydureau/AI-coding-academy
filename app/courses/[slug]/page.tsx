@@ -228,6 +228,7 @@ const courseContent: Record<
       {
         week: "Week 2",
         topic: "Customization & agents",
+        weekSlug: "week-2",
         outline: [
           "Creating effective skills",
           "Building custom agents",
