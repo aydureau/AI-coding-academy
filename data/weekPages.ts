@@ -27,6 +27,84 @@ export type WeekPage = {
 };
 
 export const weekPages: Record<string, WeekPage> = {
+  "github-copilot-track/week-2": {
+    courseTitle: "GitHub Copilot Mastery",
+    weekLabel: "Week 2",
+    title: "AI-Powered Coding with GitHub Copilot",
+    intro:
+      "Now that you know GitHub fundamentals, it's time to unlock the full power of Copilot. This week covers code completions, Copilot Chat, slash commands, and building real features faster with AI.",
+    sections: [
+      {
+        id: "completions",
+        step: 1,
+        title: "Code completions — think out loud in code",
+        subtitle: "Copilot reads your context and suggests the next lines. Learn to guide it effectively.",
+        video: {
+          youtubeId: "ZfT2CXY5-Dc",
+          title: "GitHub Copilot code completions in action (4 min)",
+        },
+        steps: [
+          {
+            label: "Write a descriptive comment first",
+            detail:
+              "Type a comment like // fetch user data from API and sort by name and press Enter. Copilot uses the comment as intent and generates the function body. The more precise your comment, the better the suggestion.",
+            tip: "Think of comments as prompts. The more context you give, the more accurate the completion.",
+          },
+          {
+            label: "Accept, reject, or cycle suggestions",
+            detail:
+              "Press Tab to accept a suggestion. Press Esc to dismiss it. Use Alt+] / Alt+[ (Windows/Linux) or Option+] / Option+[ (Mac) to cycle through alternative suggestions.",
+            screenshot:
+              "// fetch user data from API and sort by name\n─────────────────────────────────────────\n  async function fetchSortedUsers() {\n    const res = await fetch('/api/users');\n    const data = await res.json();\n    return data.sort((a, b) => a.name.localeCompare(b.name));\n  }\n\n  [ Tab: Accept ]  [ Alt+]: Next ]  [ Esc: Dismiss ]",
+          },
+          {
+            label: "Open the completions panel",
+            detail:
+              "Press Ctrl+Enter to open a full panel showing up to 10 alternative completions side by side. Useful when the inline suggestion isn't quite right and you want to pick the best option.",
+          },
+        ],
+        resources: [
+          { label: "Copilot code completions docs", url: "https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot", type: "doc" },
+          { label: "Copilot completions video", url: "https://www.youtube.com/watch?v=ZfT2CXY5-Dc", type: "video" },
+        ],
+      },
+      {
+        id: "copilot-chat",
+        step: 2,
+        title: "Copilot Chat — ask anything about your code",
+        subtitle: "Use the chat panel to explain, fix, refactor, or generate code through conversation.",
+        video: {
+          youtubeId: "a2DDYaq_oYE",
+          title: "GitHub Copilot Chat — full walkthrough (5 min)",
+        },
+        steps: [
+          {
+            label: "Open Copilot Chat",
+            detail:
+              "Click the Copilot icon in the Activity Bar (left sidebar in VS Code) or press Ctrl+Shift+I. A chat panel opens where you can type natural language questions about your code.",
+          },
+          {
+            label: "Use slash commands",
+            detail:
+              "Type / in the chat to see built-in commands: /explain (explains selected code), /fix (suggests a fix for an error), /tests (generates unit tests), /doc (adds documentation), /simplify (refactors to simpler code).",
+            screenshot:
+              "Copilot Chat\n──────────────────────────────────\n  /explain   Explain how this code works\n  /fix       Propose a fix for problems\n  /tests     Generate unit tests\n  /doc       Add documentation comments\n  /simplify  Rewrite to be simpler\n\n  [ Ask Copilot a question... ]",
+            tip: "Select code in the editor first, then use a slash command — Copilot will apply it to that specific selection.",
+          },
+          {
+            label: "Reference files with #",
+            detail:
+              "Type # in chat to attach a file or symbol to your question. For example: 'Refactor #CourseCard.tsx to use a ul/li list instead of divs.' Copilot reads the file and proposes an edit.",
+          },
+        ],
+        resources: [
+          { label: "Copilot Chat docs", url: "https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide", type: "doc" },
+          { label: "Slash commands reference", url: "https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide#slash-commands", type: "doc" },
+          { label: "Copilot Chat walkthrough", url: "https://www.youtube.com/watch?v=a2DDYaq_oYE", type: "video" },
+        ],
+      },
+    ],
+  },
   "github-copilot-track/week-1": {
     courseTitle: "GitHub Copilot Mastery",
     weekLabel: "Week 1",
