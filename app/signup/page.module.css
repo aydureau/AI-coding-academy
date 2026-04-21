@@ -1,0 +1,68 @@
+.card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 95% 5%, rgba(13, 110, 110, 0.12) 0%, transparent 30%),
+    linear-gradient(150deg, #fffdf5, #eef8f5);
+  padding: 1.4rem;
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  border-radius: 999px;
+  padding: 0.28rem 0.66rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0e5d54;
+  background: #d8ece5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  margin: 0.8rem 0 0.45rem;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.form {
+  margin-top: 0.85rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.form label {
+  font-weight: 700;
+}
+
+.form input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.62rem 0.7rem;
+  font-size: 1rem;
+}
+
+.primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background: var(--brand);
+  color: white;
+  padding: 0.62rem 0.92rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.error {
+  margin: 0;
+  color: #9f1239;
+  font-weight: 700;
+  font-size: 0.9rem;
+}

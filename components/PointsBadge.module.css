@@ -1,0 +1,41 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.36rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #c4d9d3;
+  background: linear-gradient(120deg, #eef8f5, #fffaf0);
+  color: #1f3a36;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.level {
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: #0d6e6e;
+  color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+}
+
+.points {
+  color: #0f524d;
+}
+
+.next {
+  color: #4d5a58;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .next {
+    display: none;
+  }
+}

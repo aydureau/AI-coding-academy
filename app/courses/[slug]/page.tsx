@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { StartPractisingLink } from "@/components/StartPractisingLink";
 import { courses } from "@/data/courses";
 import styles from "./page.module.css";
 
@@ -469,9 +470,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               </li>
             ))}
           </ul>
-          <Link href="/practice" className={styles.ctaButton}>
-            Start practising →
-          </Link>
+          <StartPractisingLink className={styles.ctaButton} />
         </aside>
 
         {content.resources && content.resources.length > 0 ? (

@@ -102,6 +102,12 @@
   font-weight: 700;
 }
 
+.already {
+  margin-top: 0.8rem;
+  color: #2563eb;
+  font-weight: 700;
+}
+
 .retry {
   margin-top: 0.8rem;
   background: #fff8ea;

@@ -1,0 +1,54 @@
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(140deg, #ecf8f3, #fffdf5);
+  padding: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.label {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #3a5a54;
+}
+
+.card h3 {
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+}
+
+.text {
+  margin: 0;
+  color: var(--muted);
+}
+
+.claimBtn,
+.doneBtn {
+  justify-self: start;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 0.6rem 0.9rem;
+}
+
+.claimBtn {
+  border: none;
+  background: var(--brand);
+  color: white;
+}
+
+.doneBtn {
+  border: 1px solid #a6b9b2;
+  background: #dcece8;
+  color: #30544e;
+}
+
+.flash {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 700;
+  font-size: 0.88rem;
+}

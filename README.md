@@ -7,6 +7,7 @@ A Next.js training website focused on AI and coding education.
 - Responsive multi-page site using Next.js App Router
 - Dedicated pages for Home, Courses, Lessons, and Contact
 - Reusable UI components: Navbar, Hero, CourseCard, Footer
+- Gamified progression with persistent points, levels, and completion rewards
 - TypeScript + ESLint + Tailwind CSS setup
 
 ## Run Locally
