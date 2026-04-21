@@ -14,6 +14,18 @@
   min-height: 72px;
 }
 
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.accountTools {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
 .brand {
   font-family: var(--font-heading), "Segoe UI", sans-serif;
   font-weight: 700;
@@ -44,6 +56,18 @@
     align-items: flex-start;
     padding: 0.9rem 0;
     gap: 0.7rem;
+  }
+
+  .rightSide {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .accountTools {
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .links {

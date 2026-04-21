@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { AuthGate } from "@/components/AuthGate";
 import { weekPages } from "@/data/weekPages";
+import { WeekCompletionCard } from "@/components/WeekCompletionCard";
 import styles from "./page.module.css";
 
 type WeekPageProps = {
@@ -15,6 +17,7 @@ export default async function WeekPage({ params }: WeekPageProps) {
   if (!page) notFound();
 
   return (
+    <AuthGate>
     <div className="container">
       <div className={styles.breadcrumb}>
         <Link href="/courses">All Courses</Link>
@@ -104,11 +107,13 @@ export default async function WeekPage({ params }: WeekPageProps) {
         ))}
 
         <div className={styles.navRow}>
+          <WeekCompletionCard weekKey={key} weekLabel={page.weekLabel} />
           <Link href={`/courses/${slug}`} className={styles.backBtn}>← Back to course</Link>
           <Link href="/practice" className={styles.practiceBtn}>Go to Practice Lab →</Link>
         </div>
       </div>
     </div>
+    </AuthGate>
   );
 }
 

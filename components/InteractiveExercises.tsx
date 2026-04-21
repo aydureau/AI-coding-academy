@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { LanguageExercise } from "@/data/courses";
+import { usePoints } from "@/components/PointsProvider";
 import styles from "./InteractiveExercises.module.css";
 
 type InteractiveExercisesProps = {
@@ -13,16 +14,20 @@ export function InteractiveExercises({ title, exercises }: InteractiveExercisesP
   const [activeLangIndex, setActiveLangIndex] = useState(0);
   const [activeExerciseIndex, setActiveExerciseIndex] = useState(0);
   const [answer, setAnswer] = useState("");
-  const [result, setResult] = useState<"idle" | "correct" | "retry">("idle");
-  const [score, setScore] = useState(0);
+  const [result, setResult] = useState<"idle" | "correct" | "retry" | "already">("idle");
+  const { solvedExercises, awardExerciseCompletion, isExerciseSolved } = usePoints();
 
   const activeLanguage = exercises[activeLangIndex];
   const activeExercise = activeLanguage.items[activeExerciseIndex];
 
   const progress = useMemo(() => {
     const total = exercises.reduce((sum, ex) => sum + ex.items.length, 0);
-    return `${score}/${total}`;
-  }, [exercises, score]);
+    const solved = exercises
+      .flatMap((group) => group.items)
+      .filter((item) => Boolean(solvedExercises[item.id])).length;
+
+    return `${solved}/${total}`;
+  }, [exercises, solvedExercises]);
 
   function evaluateAnswer() {
     const normalized = answer.trim().toLowerCase();
@@ -31,8 +36,13 @@ export function InteractiveExercises({ title, exercises }: InteractiveExercisesP
     );
 
     if (isMatch) {
+      if (isExerciseSolved(activeExercise.id)) {
+        setResult("already");
+        return;
+      }
+
+      awardExerciseCompletion(activeExercise.id);
       setResult("correct");
-      setScore((prev) => prev + 1);
       return;
     }
 
@@ -111,6 +121,7 @@ export function InteractiveExercises({ title, exercises }: InteractiveExercisesP
         </div>
 
         {result === "correct" && <p className={styles.correct}>Nice! Correct direction. +1 point</p>}
+        {result === "already" && <p className={styles.already}>Challenge already solved. Try the next one.</p>}
         {result === "retry" && (
           <div className={styles.retry}>
             <p>Almost there. Try using one of these hints:</p>
