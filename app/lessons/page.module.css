@@ -1,0 +1,99 @@
+.hero {
+  padding: 2rem 0 1.2rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 1.3rem 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 170ms ease, box-shadow 170ms ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgb(30 40 30 / 0.09);
+}
+
+.number {
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #e2ede9;
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  line-height: 1;
+}
+
+.meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #e9efe8;
+  color: var(--muted);
+}
+
+.card h2 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0 0 0.8rem;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.topics {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.topics li {
+  background: #d8ece5;
+  color: #0e5d54;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.22rem 0.5rem;
+  border-radius: 8px;
+}
+
+.cta {
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 0.9rem;
+}

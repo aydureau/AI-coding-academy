@@ -1,0 +1,147 @@
+.stackSection {
+  margin: 2rem 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.stackSection h2 {
+  margin-top: 0;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+}
+
+.caption {
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+
+/* ── Stack layers ── */
+.stack {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f3f8f5;
+  cursor: default;
+  transition: background 170ms ease;
+}
+
+.layer:hover {
+  background: #d8ece5;
+}
+
+.layerIcon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.layerLabel {
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 120px;
+}
+
+.layerTooltip {
+  display: none;
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 260px;
+  background: #1b1f23;
+  color: #f0f4f2;
+  font-size: 0.82rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  z-index: 10;
+  line-height: 1.45;
+}
+
+.layer:hover .layerTooltip {
+  display: block;
+}
+
+/* ── AI ↔ Infra flow diagram ── */
+.flowDiagram {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #f9faf7;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+.flowBox {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 0.8rem;
+  gap: 0.2rem;
+  font-size: 0.88rem;
+}
+
+.flowIcon {
+  font-size: 1.6rem;
+}
+
+.flowBox strong {
+  font-size: 1rem;
+}
+
+.flowBox span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.flowArrows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.flowArrow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.arrowLine {
+  color: var(--brand);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 700px) {
+  .layerTooltip {
+    left: 0;
+    top: calc(100% + 6px);
+    transform: none;
+    width: 100%;
+  }
+
+  .flowDiagram {
+    flex-direction: column;
+  }
+}

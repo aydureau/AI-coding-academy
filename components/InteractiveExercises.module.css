@@ -1,0 +1,120 @@
+.wrapper {
+  margin: 2rem 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  padding: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+}
+
+.header p {
+  color: var(--muted);
+}
+
+.tabRow {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0 1rem;
+}
+
+.tab,
+.tabActive {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  background: white;
+}
+
+.tabActive {
+  background: #d9ebe6;
+  border-color: #bad7cf;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem;
+  background: #fffefb;
+}
+
+.description {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.code {
+  background: #151823;
+  color: #edf2f7;
+  border-radius: 10px;
+  padding: 0.8rem;
+  overflow-x: auto;
+}
+
+.label {
+  display: inline-block;
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  border-radius: 10px;
+  padding: 0.55rem 0.95rem;
+  font-weight: 700;
+}
+
+.primary {
+  border: none;
+  background: var(--brand);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.correct {
+  margin-top: 0.8rem;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.retry {
+  margin-top: 0.8rem;
+  background: #fff8ea;
+  border: 1px solid #f3d9a6;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+.retry p {
+  margin: 0 0 0.4rem;
+}
+
+.retry ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}

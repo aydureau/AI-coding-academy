@@ -1,0 +1,149 @@
+.diagramSection {
+  margin: 2rem 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.diagramSection h2 {
+  margin-top: 0;
+  font-family: var(--font-heading), "Segoe UI", sans-serif;
+}
+
+.diagramCaption {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ── 8-phase cycle ── */
+.cycle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.phaseWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phase {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f3f8f5;
+  padding: 0.7rem 0.5rem 0.5rem;
+  text-align: center;
+  cursor: default;
+  transition: background 170ms ease;
+}
+
+.phase:hover {
+  background: #d8ece5;
+}
+
+.phaseIcon {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.phaseLabel {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-top: 0.2rem;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: #1b1f23;
+  color: #f0f4f2;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  z-index: 10;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.phase:hover .tooltip {
+  display: block;
+}
+
+.arrow {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  visibility: hidden;
+}
+
+/* ── Build / Run pipeline ── */
+.pipeline {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pipelineGroup {
+  padding: 0.8rem 1rem;
+}
+
+.pipelineGroupLabel {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pipelineRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.pipelineBox {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #e9efe8;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.pipelineArrow {
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: none;
+  padding: 0;
+}
+
+.pipelineDivider {
+  text-align: center;
+  padding: 0.4rem;
+  background: #d8ece5;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0e5d54;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .cycle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
